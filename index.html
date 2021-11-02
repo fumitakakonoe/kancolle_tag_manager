@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" lang="jp">
+    <meta name="description" content="艦これのお札を管理します。">
+    <title>艦これお札管理 kancolle tag management</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer="true"></script>
+    <script src="scripts/drag_and_drop.js" defer="true"></script>
+</head>
+<html>
+
+<body>
+    <header>艦これお札管理</header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h1>使い方</h1>
+            <p>操作説明をここに書く。</p>
+        </section>
+
+        <hr>
+
+        <section class="fleet_data">
+            <p>
+                <label>艦隊データをここに張り付ける
+                    <input type="text" value="">
+                </label>
+                <button type="button" id="import_freet">取り込む</button>
+            </p>
+        </section>
+
+        <!-- お札の登録、編集、削除を行う。 -->
+        <section class="tag_edit">
+            <p>
+                <label>お札の登録、編集、削除
+                    <input type="text" list="taglist" id="tagname">
+                    <datalist id="taglist">
+                        <option value="お札の名前1">お札の名前1</option>
+                        <option value="お札の名前2">お札の名前2</option>
+                        <option value="お札の名前3">お札の名前3</option>
+                    </datalist>
+                    <button type="button" id="add_tagname">登録</button>
+                    <button type="button" id="edit_tagname">編集</button>
+                    <button type="button" id="delete_tagname">削除</button>
+                </label>
+            </p>
+        </section>
+
+        <!-- 艦娘の一覧を表示する。ドラッグ元になる。 -->
+        <section class="ship_list_area">
+            <p>
+                艦娘一覧
+            </p>
+            <table class="ship_list">
+                <tr>
+                    <td draggable="true" class="ship_name">艦娘1</td>
+                </tr>
+                <tr>
+                    <td draggable="true" class="ship_name">艦娘2</td>
+                </tr>
+                <tr>
+                    <td draggable="true" class="ship_name">艦娘3</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 艦娘とお札の対応表。ドロップ先になる。 -->
+        <section class="area_table">
+            <p>
+                <label>海域名等
+                    <input type="text" value="" id=" comment">
+                    <select name=" taglist">
+                        <option value="1">お札の名前1</option>
+                        <option value="2">お札の名前2</option>
+                        <option value="3">お札の名前3</option>
+                    </select>
+                    <button type=" button" id="add_row">行を追加する</button>
+                </label>
+            </p>
+            <table>
+                <tbody class="fleet_list dropzone">
+                    <tr class="fleet">
+                        <td class="ship_name">E1-1</td>
+                        <td class="ship_name">お札の名前1</td>
+                        <td draggable="true" class="ship_name">艦娘1</td>
+                        <td draggable="true" class="ship_name">艦娘2</td>
+                        <td draggable="true" class="ship_name">艦娘3</td>
+                        <td draggable="true" class="ship_name">艦娘4</td>
+                    </tr>
+                </tbody>
+                <tbody class="fleet_list dropzone">
+                    <tr class="fleet">
+                        <td class="ship_name">E1-2</td>
+                        <td class="ship_name">お札の名前1</td>
+                        <td draggable="true" class="ship_name">艦娘1</td>
+                        <td draggable="true" class="ship_name">艦娘2</td>
+                        <td draggable="true" class="ship_name">艦娘3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>2021</footer>
+
+</body>
+
+</html>

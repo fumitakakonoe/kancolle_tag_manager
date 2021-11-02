@@ -1,0 +1,63 @@
+header {
+  clear: both;
+  width: auto;
+  font-size: large;
+  text-align: left;
+}
+
+footer{
+  clear: both;
+  width: auto;
+  text-align: center;
+}
+
+hr{
+  clear: both;
+  width: auto;
+}
+
+/* .fleetdata{
+  float: left;
+} */
+
+/* .tag_edit{
+  float: left;
+} */
+
+.ship_list_area{
+  float: right;
+  border: 1px solid black;
+}
+
+.ship_list{
+
+}
+
+.ship_name{
+  border:1px solid blue;
+}
+
+.area_table{
+  float: left;
+}
+
+ /* tbody{ */
+  /* border-collapse: collapse; */
+  /* border-spacing: 10px; */
+  /* border:1px solid blue; */
+/* } */
+
+.fleet_list{
+  display: block;
+  /* border-collapse: collapse; */
+  /* border-spacing: 10px; */
+  /* padding-top: 1vw; */
+  /* padding-bottom: 1vw; */
+  /* padding-left: 1vw; */
+  padding-right: 10vw;
+  border:1px solid blue;
+}
+
+.fleet{
+  border:1px solid blue;
+}
